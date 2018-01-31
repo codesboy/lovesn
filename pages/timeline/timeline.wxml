@@ -1,0 +1,5 @@
+<!--pages/timeline/timeline.wxml-->
+<view class='container'>
+    <text>pages/timeline/timeline.wxml</text>
+</view>
+

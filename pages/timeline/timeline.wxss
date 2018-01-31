@@ -1,0 +1,4 @@
+/* pages/timeline/timeline.wxss */
+page{
+    background: #efefee;
+}
