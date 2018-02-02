@@ -17,7 +17,7 @@ Page({
         var _this = this;
         wx.request({
             url: app.globalData.baseUrl+'showlove',
-            method:'POST',
+            method:'GET',
             success:function(res){
                 console.log(res.data)
                 _this.setData({

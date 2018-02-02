@@ -1,5 +1,36 @@
 <!--pages/timeline/timeline.wxml-->
 <view class='container'>
-    <text>pages/timeline/timeline.wxml</text>
+    <view class='line-lists'>
+        <view class='line-list' wx:for='{{timelines}}'>
+            <view class='time'>
+                <view class='year-time'>2018</view>
+                <view class='day-time'>01/19</view>
+            </view>
+            <view class='line'>
+                <view class='love lw-love3'></view>
+            </view>
+            <view class='thing' style='background-image:url({{item.picurl}})'>
+                <view class='mask'>
+                    <view class='tit'>{{item.tit}}</view>
+                    <view class='content'>{{item.description}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- <view class='line-list'>
+            <view class='time'>
+                <view class='year-time'>2018</view>
+                <view class='day-time'>01/19</view>
+            </view>
+            <view class='line'>
+                <view class='love lw-love3'></view>
+            </view>
+            <view class='thing' style='background-image:url(http://7xlaft.com1.z0.glb.clouddn.com/meitu%2F2016012802.jpg)'>
+                <view class='mask'>
+                    <view class='tit'>get you</view>
+                    <view class='content'>today I get you..大点带我去带伞大几乎都是接啊 好</view>
+                </view>
+            </view>
+        </view> -->
+    </view>
 </view>
 

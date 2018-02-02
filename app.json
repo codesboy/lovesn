@@ -1,8 +1,8 @@
 {
     "pages": [
-        "pages/index/index",
+        "pages/timeline/timeline",
         "pages/logs/logs",
-        "pages/timeline/timeline"
+        "pages/index/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

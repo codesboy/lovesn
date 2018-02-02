@@ -7,4 +7,31 @@
   /* justify-content: space-between;*/
   padding: 0 20rpx;
   box-sizing: border-box; 
+  text-justify:inter-ideograph;
 } 
+
+@font-face {
+  font-family: 'love';  /* project id 559454 */
+  src: url('//at.alicdn.com/t/font_559454_6szv6kzv0v4jwcdi.eot');
+  src: url('//at.alicdn.com/t/font_559454_6szv6kzv0v4jwcdi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_559454_6szv6kzv0v4jwcdi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_559454_6szv6kzv0v4jwcdi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_559454_6szv6kzv0v4jwcdi.svg#love') format('svg');
+}
+
+.love {
+  font-family:"love" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lw-10905:before { content: "\e633"; }
+
+.lw-love:before { content: "\e661"; }
+
+.lw-yinlemusic216:before { content: "\e71e"; }
+
+.lw-love3:before { content: "\e609"; }
+

@@ -2,3 +2,84 @@
 page{
     background: #efefee;
 }
+.line-lists{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+.line-list{
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+}
+.time{
+    display: flex;
+    width: 160rpx;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    color: #f36f86;
+}
+.time .day-time{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.line{
+    height: 100%;
+    /* width: 2px; */
+    color: #d615ab;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    align-items: center;
+    margin: 0 15px;
+}
+.line::before{
+    content: '';
+    display: block;
+    background: #fff;
+    width: 3px;
+    height: 75px;
+}
+.line::after{
+    content: '';
+    display: block;
+    background: #fff;
+    width: 3px;
+    height: 75px;
+}
+.line .love{
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+}
+.thing{
+    width: 100%; 
+    background-color: #fff;
+    margin: 10px 0;
+    color: #d615ab;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+    overflow: hidden;
+    text-shadow: 1px 1px 0 #fff;
+}
+.thing .mask{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    /* background-color: rgba(	192,192,192,.6);  */
+    align-items: center;
+    justify-content: space-around;
+}
+.thing .content{
+    font-size: 28rpx;
+}
