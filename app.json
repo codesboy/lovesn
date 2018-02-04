@@ -3,8 +3,7 @@
         "pages/index/index",
         "pages/timeline/timeline",
         "pages/todo/todo",
-        "pages/photos/photos",
-        "pages/logs/logs"
+        "pages/photos/photos"
     ],
     "window": {
         "backgroundTextStyle": "dark",
@@ -17,7 +16,7 @@
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "首页"
+                "text": "爱薇"
             },
             {
                 "pagePath": "pages/timeline/timeline",

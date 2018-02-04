@@ -7,7 +7,7 @@
             };
             module.exports.sub = sub;
         </wxs>
-        <view class='line-list' wx:for='{{timelines}}'>
+        <view class='line-list' wx:for='{{timelines}}' wx:key="time">
             <view class='time'>
                 <view class='year-time'>{{util.sub(item.time,0,4)}}</view>
                  <view class='day-time'>{{util.sub(item.time,5,11)}}</view> 
