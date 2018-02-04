@@ -1,1 +1,15 @@
 /* pages/todo/todo.wxss */
+.list{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    font-size: 30rpx;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.status{
+    background: #52a68e;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 3px;
+}

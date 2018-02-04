@@ -72,7 +72,7 @@ Page({
         var _this = this;
         if (wx.showLoading) {
             wx.showLoading({
-                title: "加载中"
+                title: "Love's coming"
             })
         }
         wx.request({

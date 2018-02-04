@@ -1,9 +1,10 @@
 {
     "pages": [
-        "pages/timeline/timeline",
-        "pages/logs/logs",
         "pages/index/index",
-        "pages/todo/todo"
+        "pages/timeline/timeline",
+        "pages/todo/todo",
+        "pages/photos/photos",
+        "pages/logs/logs"
     ],
     "window": {
         "backgroundTextStyle": "dark",
@@ -25,6 +26,10 @@
             {
                 "pagePath": "pages/todo/todo",
                 "text": "TodoList"
+            },
+            {
+                "pagePath": "pages/photos/photos",
+                "text": "相册"
             }
         ]
     }

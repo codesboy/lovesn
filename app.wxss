@@ -6,7 +6,8 @@
   align-items: center;
   /* justify-content: space-between;*/
   padding: 0 20rpx;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  text-align: justify;
   text-justify:inter-ideograph;
 } 
 

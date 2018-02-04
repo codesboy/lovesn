@@ -1,5 +1,6 @@
 //index.js
 const time = require('../../common/time.js');
+const garden = require('../../common/garden.js');
 //获取应用实例
 const app = getApp();
 // 全局唯一的背景音频管理器
@@ -93,7 +94,7 @@ Page({
         var _this = this;
         if (wx.showLoading) {
             wx.showLoading({
-                title: "加载中"
+                title: "Love's coming"
             })
         }
         wx.request({

@@ -1,20 +1,23 @@
 /**index.wxss**/
-
+page{
+    padding-bottom: 100px;
+}
 .love-show {
     text-indent: 2em;
-    font-size: 16px;
+    font-size: 32rpx;
+    line-height: 26px;
 }
 
-.love-show text {
-    color: red;
-}
 
 .musicControll {
     font-size: 30px;
     color: #000;
     position: fixed;
     right: 10px;
-    top: 20%;
+    top: 8px;
+    z-index: 10;
+    background: #fff;
+    border-radius: 100%;
 }
 
 .rotate {
@@ -29,4 +32,27 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.heart{
+    width: 100%;
+    height: 665rpx; 
+    background-image:url('https://me.rehack.cn/lovewei/images/heart.png');
+    background-position: 0 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 80rpx 0;
+}
+
+.lovetime{
+    color: #f321bb;
+}
+.lovetime-t {
+    color: #f321bb;
+    margin-bottom:154rpx;
+    margin-top: 20rpx;
 }

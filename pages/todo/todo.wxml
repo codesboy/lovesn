@@ -1,2 +1,6 @@
 <!--pages/todo/todo.wxml-->
-<view class='container'>todo</view>
+<view class='container'>
+    <view wx:for="{{todolist}}" class='list'>
+        {{item.do}}<view class='status'>{{item.status}}</view>
+    </view>
+</view>

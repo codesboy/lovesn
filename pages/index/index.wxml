@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-    <!-- <audio src="{{musicSrc}}" id="myAudio" loop></audio> -->
+    <view class="musicControll love lw-yinlemusic216 {{toggle?'rotate':''}}" bindtap="audioToggle" ></view>
+    
+    <view class='heart'>
+        <view class='lovetime'>宝贝，我们相识的时光：</view>
+        <text class='lovetime-t'>{{loveTime}}</text>
+    </view>
     <view class='love-show'>{{loveShow}}</view>
-    <view class="musicControll love lw-yinlemusic216 {{toggle?'rotate':''}}" bindtap="audioToggle"></view>
 </view>

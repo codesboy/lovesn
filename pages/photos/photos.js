@@ -1,5 +1,4 @@
-// pages/todo/todo.js
-var  app = getApp();
+// pages/photos/photos.js
 Page({
 
   /**
@@ -13,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      this.loadData();
+  
   },
 
   /**
@@ -63,23 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  loadData(){
-      var _this = this;
-      wx.request({
-          url: app.globalData.baseUrl+'todolist',
-          success:function(res){
-              console.log(res.data)
-              _this.setData({
-                  todolist:res.data
-              })
-          },
-          fail:function(){
-
-          },
-          complete:function(){
-              
-          }
-      })
   }
 })
