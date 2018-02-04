@@ -13,7 +13,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.loadData();
     },
 
     /**
@@ -27,16 +27,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        var _this = this;
-        wx.request({
-            url: app.globalData.baseUrl +'timeline',
-            success:function(res){
-                console.log(res.data)
-                _this.setData({
-                    timelines:res.data
-                })
-            }
-        })
+       
     },
 
     /**
@@ -72,5 +63,35 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+    // 下拉刷新
+    onPullDownRefresh (e) {
+        this.loadData();
+    },
+    loadData(){
+        var _this = this;
+        if (wx.showLoading) {
+            wx.showLoading({
+                title: "加载中"
+            })
+        }
+        wx.request({
+            url: app.globalData.baseUrl + 'timeline',
+            success: function (res) {
+                console.log(res.data)
+                _this.setData({
+                    timelines: res.data
+                })
+            },
+            fail:function(){
+
+            },
+            complete:function(){
+                wx.stopPullDownRefresh()
+                if (wx.hideLoading) {
+                    wx.hideLoading();
+                }
+            }
+        })
     }
 })

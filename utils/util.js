@@ -14,6 +14,13 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+function playAudio() {
+    wx.playBackgroundAudio({
+        dataUrl: 'https://me.rehack.cn/lovewei/music/love.mp3'
+    })
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  playAudio: playAudio
 }

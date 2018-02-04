@@ -2,13 +2,15 @@
     "pages": [
         "pages/timeline/timeline",
         "pages/logs/logs",
-        "pages/index/index"
+        "pages/index/index",
+        "pages/todo/todo"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
+        "navigationBarTitleText": "卢薇",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
     },
     "tabBar": {
         "list": [
@@ -19,6 +21,10 @@
             {
                 "pagePath": "pages/timeline/timeline",
                 "text": "时光轴"
+            },
+            {
+                "pagePath": "pages/todo/todo",
+                "text": "TodoList"
             }
         ]
     }
