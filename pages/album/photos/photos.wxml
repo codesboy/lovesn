@@ -1,0 +1,6 @@
+<!--pages/photos/photos/photoas.wxml-->
+<view class='container'>
+    <view class='photo' wx:for='{{photos}}'>
+        <image src='https://me.rehack.cn{{item.img.url}}' data-src='{{item.img.url}}' bindtap='prev'></image>
+    </view>   
+</view>

@@ -1,0 +1,7 @@
+<!--pages/photos/photos.wxml-->
+<view class='container'>
+    <view class='album' wx:for='{{album}}' bindtap='enterPhotos' data-id='{{item.id}}'>
+        <image src='https://me.rehack.cn/{{item.cover_img.url}}'></image>
+        <text>{{item.name}}({{item.items_count}}张)</text>
+    </view>
+</view>

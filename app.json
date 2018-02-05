@@ -1,9 +1,10 @@
 {
     "pages": [
+        "pages/album/album",
         "pages/index/index",
         "pages/timeline/timeline",
         "pages/todo/todo",
-        "pages/photos/photos"
+        "pages/album/photos/photos"
     ],
     "window": {
         "backgroundTextStyle": "dark",
@@ -27,7 +28,7 @@
                 "text": "TodoList"
             },
             {
-                "pagePath": "pages/photos/photos",
+                "pagePath": "pages/album/album",
                 "text": "相册"
             }
         ]
