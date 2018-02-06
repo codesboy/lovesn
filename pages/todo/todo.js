@@ -64,8 +64,18 @@ Page({
   onShareAppMessage: function () {
   
   },
-  loadData(){
+  // 下拉刷新
+  onPullDownRefresh(e) {
+      this.loadData();
+  },
+  // 获取数据
+  loadData() {
       var _this = this;
+      if (wx.showLoading) {
+          wx.showLoading({
+              title: "Love's coming"
+          })
+      }
       wx.request({
           url: app.globalData.baseUrl+'todolist',
           success:function(res){
@@ -78,7 +88,10 @@ Page({
 
           },
           complete:function(){
-              
+              wx.stopPullDownRefresh()
+              if (wx.hideLoading) {
+                  wx.hideLoading();
+              }
           }
       })
   }

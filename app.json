@@ -1,9 +1,9 @@
 {
     "pages": [
-        "pages/album/album",
         "pages/index/index",
         "pages/timeline/timeline",
         "pages/todo/todo",
+        "pages/album/album",
         "pages/album/photos/photos"
     ],
     "window": {

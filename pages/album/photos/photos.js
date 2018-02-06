@@ -1,5 +1,5 @@
 // pages/photos/photos/photoas.js
-var app =getApp();
+var app = getApp();
 Page({
 
     /**
@@ -13,9 +13,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options)
+        // console.log(options)
         this.setData({
-            albumId:options.id
+            albumId: options.id
         })
         this.loadData();
     },
@@ -68,34 +68,55 @@ Page({
     onShareAppMessage: function () {
 
     },
-
-    // 加载数据
+    // 下拉刷新
+    onPullDownRefresh(e) {
+        this.loadData();
+    },
+    // 获取数据
     loadData() {
         var _this = this;
+        if (wx.showLoading) {
+            wx.showLoading({
+                title: "Love's coming"
+            })
+        }
         wx.request({
             url: app.globalData.baseUrl + 'getphotos?id=' + this.data.albumId,
             success: function (res) {
-                console.log(res.data)
+                // console.log(res.data)
+                var data = res.data.items;
                 _this.setData({
-                    photos: res.data.items
+                    photos: data
+                })
+                var urls = [];
+                for (var i in data) {
+                    urls.push('https://me.rehack.cn' + data[i].img.url)
+                }
+                _this.setData({
+                    urls
                 })
             },
             fail: function (e) {
                 console.log(e.errMsg)
             },
             complete: function () {
-
+                wx.stopPullDownRefresh()
+                if (wx.hideLoading) {
+                    wx.hideLoading();
+                }
             }
         })
     },
 
     // 预览原图
-    prev(e){
-        console.log(e.currentTarget.dataset.src)
+    preview(e) {
+        // console.log(e.currentTarget.dataset.src)
+        console.log(this.data.urls)
         var src = 'https://me.rehack.cn' + e.currentTarget.dataset.src;
+
         wx.previewImage({
-            current:src, // 当前显示图片的http链接
-            urls: [src]
+            current: src, // 当前显示图片的http链接
+            urls: this.data.urls
         })
     }
 })

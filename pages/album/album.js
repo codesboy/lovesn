@@ -64,10 +64,18 @@ Page({
     onShareAppMessage: function () {
 
     },
-
+    // 下拉刷新
+    onPullDownRefresh(e) {
+        this.loadData();
+    },
     // 获取数据
     loadData(){
         var _this = this;
+        if (wx.showLoading) {
+            wx.showLoading({
+                title: "Love's coming"
+            })
+        }
         wx.request({
             url: app.globalData.baseUrl+'getalbum',
             success:function(res){
@@ -80,7 +88,10 @@ Page({
                 console.log(e.errMsg)
             },
             complete:function(){
-
+                wx.stopPullDownRefresh()
+                if (wx.hideLoading) {
+                    wx.hideLoading();
+                }
             }
         })
     },
@@ -88,7 +99,7 @@ Page({
     // 进入相册
     enterPhotos(e){
         var albumId = e.currentTarget.dataset.id;
-        console.log(albumId)
+        // console.log(albumId)
         wx.navigateTo({
             url:'photos/photos?id='+albumId
         })

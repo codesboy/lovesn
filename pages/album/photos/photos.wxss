@@ -1,1 +1,13 @@
 /* pages/photos/photos/photoas.wxss */
+.photo-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.photo{
+    width: 225rpx;
+    height: 225rpx;
+    margin: 20rpx 3rpx;
+    border: 1px solid #ddd;
+}
