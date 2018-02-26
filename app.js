@@ -33,10 +33,10 @@ App({
             }
         });
         // wx.playBackgroundAudio({
-        //     dataUrl: 'https://me.rehack.cn/lovewei/music/love.mp3',
+        //     dataUrl: 'https://me.rehack.cn/lovesn/music/love.mp3',
         // })
         // const backgroundAudioManager = wx.getBackgroundAudioManager();
-        // backgroundAudioManager.src = 'https://me.rehack.cn/lovewei/music/love.mp3' // 设置了 src 之后会自动播放
+        // backgroundAudioManager.src = 'https://me.rehack.cn/lovesn/music/love.mp3' // 设置了 src 之后会自动播放
     },
     globalData: {
         userInfo: null,

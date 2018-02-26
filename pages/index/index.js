@@ -13,7 +13,7 @@ Page({
         toggle: true,
         loveTime: '',
         loveShow: '',
-        musicSrc: 'https://me.rehack.cn/lovewei/music/love.mp3'
+        musicSrc: 'https://me.rehack.cn/lovesn/music/love.mp3'
     },
     onLoad: function () {
         this.loadData();
