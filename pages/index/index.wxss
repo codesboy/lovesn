@@ -37,7 +37,7 @@ page{
 .heart{
     width: 100%;
     height: 665rpx; 
-    background-image:url('https://me.rehack.cn/lovesn/images/heart.png');
+    background-image:url('https://me.rehack.cn/lovesr/images/heart.png');
     background-position: 0 0;
     background-size: cover;
     display: flex;

@@ -16,7 +16,7 @@ const formatNumber = n => {
 
 function playAudio() {
     wx.playBackgroundAudio({
-        dataUrl: 'https://me.rehack.cn/lovesn/music/love.mp3'
+        dataUrl: 'https://me.rehack.cn/lovesr/music/love.mp3'
     })
 }
 
