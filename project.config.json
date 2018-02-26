@@ -8,9 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.2",
-	"appid": "wxb87146459a7b65ac",
-	"projectname": "love",
+	"libVersion": "1.9.1",
+	"appid": "wx90075bc2c2549d3f",
+	"projectname": "lovesn",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

@@ -13,7 +13,7 @@ function siteTime() {
     // var todayMinute = today.getMinutes();
     // var todaySecond = today.getSeconds();
     var nowTime = new Date().getTime();//当前时间戳
-    var loveBeginTime = new Date('2018 / 01 / 19').getTime();//恋爱开始时间戳
+    var loveBeginTime = new Date('2018 / 02 / 18').getTime();//恋爱开始时间戳
     var diff = nowTime - loveBeginTime;//恋爱的时长
     var diffYears = Math.floor(diff / years);
     var diffDays = Math.floor((diff / days) - diffYears * 365);

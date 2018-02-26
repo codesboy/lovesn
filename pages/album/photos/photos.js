@@ -113,6 +113,7 @@ Page({
         // console.log(e.currentTarget.dataset.src)
         console.log(this.data.urls)
         var src = 'https://me.rehack.cn' + e.currentTarget.dataset.src;
+        console.log(src)
 
         wx.previewImage({
             current: src, // 当前显示图片的http链接
