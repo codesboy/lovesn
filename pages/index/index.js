@@ -13,7 +13,9 @@ Page({
         toggle: true,
         loveTime: '',
         loveShow: '',
-        musicSrc: 'https://me.rehack.cn/lovesr/music/love.mp3'
+        musicSrc: 'https://me.rehack.cn/lovesr/music/love.mp3',
+        timer:null,
+        tpl:'123456'
     },
     onLoad: function () {
         this.loadData();
@@ -91,7 +93,8 @@ Page({
 
     // 请求服务器数据
     loadData(){
-        var _this = this;
+        // console.log(this.data.timer)
+        clearInterval(this.data.timer);
         if (wx.showLoading) {
             wx.showLoading({
                 title: "Love's coming"
@@ -100,11 +103,22 @@ Page({
         wx.request({
             url: app.globalData.baseUrl + 'showlove',
             method: 'GET',
-            success: function (res) {
-                console.log(res.data)
-                _this.setData({
-                    loveShow: res.data.show
+            success: (res)=> {
+                let n = 0;
+                this.setData({
+                    timer: setInterval(() => {
+                        this.setData({
+                            loveShow: res.data.show.substring(0,n)
+                        })
+                        n++;
+                        // console.log(this.data.loveShow)
+                        if (this.data.loveShow == res.data.show) {
+                            clearInterval(this.data.timer)
+                        }
+
+                    }, 150)
                 })
+                
             },
             fail: function (e) {
                 console.log(e.errMsg)
